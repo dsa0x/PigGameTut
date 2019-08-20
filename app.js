@@ -62,6 +62,12 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
     document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer]
 
     var win = document.getElementById('win').value
+
+    if (win) {
+        var score = win
+    } else {
+        score = 100
+    }
     if (scores[activePlayer] >= win){
         document.querySelector('#name-' + activePlayer).textContent = 'Winner'
         document.querySelector('.dice1').style.display = 'none'
